@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penyamar Link & URL Shortener</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Penyamar Link</h2>
+    <p class="subtitle">Ubah atau samarkan link panjang Anda menjadi tautan baru yang lebih rapi.</p>
+
+    <form id="url-form">
+      <div class="input-group">
+        <label for="original-url">Link Asli</label>
+        <input type="url" id="original-url" placeholder="https://contoh.com/link-panjang-anda" required>
+      </div>
+
+      <div class="input-group">
+        <label for="custom-alias">Alias/Kustom Teks (Opsional)</label>
+        <input type="text" id="custom-alias" placeholder="contoh: promo-diskon">
+      </div>
+
+      <button type="submit" id="btn-submit">Buat Link Baru</button>
+    </form>
+
+    <div id="result-box" class="result-box hidden">
+      <label>Link Hasil Penyamaran:</label>
+      <div class="result-input-wrapper">
+        <input type="text" id="masked-url" readonly>
+        <button id="btn-copy">Salin</button>
+      </div>
+      <p id="copy-status" class="copy-status"></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
